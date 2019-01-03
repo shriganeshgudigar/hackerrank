@@ -61,7 +61,7 @@ class Amazon{
         return expectedChar;
     }
     HashMap<String, HashMap<String, Integer>> mapOfMap = new HashMap<String, HashMap<String, Integer>>();
-    public void songCountForBand(String bandName, String songName){
+    public void  songCountForBand(String bandName, String songName){
         if(mapOfMap.containsKey(bandName)){
             if(mapOfMap.get(bandName).containsKey(songName)){
                 mapOfMap.get(bandName).put(songName, mapOfMap.get(bandName).get(songName) + 1);

@@ -4,12 +4,14 @@ public class Rotation {
 	public static void main(String[] args) {
 		System.out.println("hello");
 		int arr[] = {1,2,3,4,5};
-		int rotation =  2;
-		int finalArr[] = rotation(arr, rotation);
+		int rotation =  5;//2 left rotation.
+		reverse(arr, rotation, arr.length-1);
+		reverse(arr, 0, rotation-1);
+		reverse(arr, 0, arr.length-1);
 		int k = 0;
 		
-		while(k < finalArr.length ){
-			System.out.print(finalArr[k] + " ");
+		while(k < arr.length ){
+			System.out.print(arr[k] + " ");
 			k = k + 1;
 		}
 		return;
@@ -31,5 +33,24 @@ public class Rotation {
 			j =  j + 1;
 		}
 		return arr;
+	}
+
+	//reversal algorithm.
+
+	public static void reverse(int arr[], int startIndex, int endIndex){
+		int i=startIndex, j=endIndex, temp =0;
+		while(i<j){
+			temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+			i++;
+			j--;
+		}
+		int k = 0;
+
+	}
+
+	public static void rotationReversalAlgorithm(int arr[], int rotationCount){
+
 	}
 }
