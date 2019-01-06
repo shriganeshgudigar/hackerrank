@@ -32,6 +32,7 @@ public class MyTree implements Tree, DisplayTree{
         }
     }
 
+//    leftPointerData - rightpointerdata - pointerData
     public void postOrderDisplay(Node nodeAdd){
         if(nodeAdd == null){
             return;
